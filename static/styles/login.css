@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    animation: backgroundAnimation 5s ease-in-out infinite alternate;
+}
+
+
+.header {
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    text-align: center;
+    z-index: 10;
+}
+
+.logo {
+    width: 100px; /* Adjust size as needed */
+    margin-right: 10px;
+    animation: logoBounce 2s ease-in-out infinite alternate;
+}
+
+.brand-name {
+    font-size: 36px;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: textColorChange 3s ease-in-out infinite alternate;
+}
+
+.container {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 90%;
+    max-width: 400px;
+    opacity: 0;
+    animation: fadeInContainer 1s 1s forwards;
+    position: absolute;
+    right: 20%;
+    top: 55%;
+    transform: translateY(-50%); /* Center vertically */
+}
+
+.tabs {
+    display: flex;
+    background: #f1f1f1;
+    opacity: 0;
+    animation: fadeInTabs 1s 2s forwards;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 15px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    transition: background 0.3s;
+    animation: fadeInButtons 1s ease-in-out;
+}
+
+.tabs button.active {
+    background: #74ebd5;
+    color: #fff;
+}
+
+.form-container {
+    padding: 20px;
+}
+
+.form-container form {
+    display: none;
+    flex-direction: column;
+    animation: fadeInForm 0.5s ease-in-out;
+}
+
+.form-container form.active {
+    display: flex;
+}
+
+.form-container input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    opacity: 0;
+    animation: fadeInInputs 1s ease-in-out forwards;
+}
+
+.form-container button {
+    padding: 10px;
+    border: none;
+    background: #74ebd5;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form-container button:hover {
+    background: #58d1c9;
+}
+
+.toggle-link {
+    text-align: center;
+    margin-top: 10px;
+    color: #74ebd5;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes logoBounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+
+@keyframes textColorChange {
+    from { color:  #00FFFF; }
+    to { color: #4169E1; }
+}
+
+@keyframes fadeInContainer {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInTabs {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInButtons {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInForm {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInInputs {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .tabs button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@keyframes backgroundAnimation {
+    0% { background: linear-gradient(135deg, #74ebd5, #ACB6E5); }
+    100% { background: linear-gradient(135deg, #ACB6E5, #74ebd5); }
+}

@@ -1,0 +1,6 @@
+id,transaction_type,amount,transaction_date
+
+1,earned,10,2025-02-05
+2,earned,110,2025-02-19
+3,spent,100,2025-02-08
+4,earned,10,2025-01-27

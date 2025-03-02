@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/styles/report.css">
+    <script defer src="../static/java/report.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-title">
+            <a href="../templates/index.html"> <!-- Make the logo clickable -->
+                <img src="../logo.png" alt="Logo" class="logo">
+            </a>
+            <h1>Chatterbox Tracking</h1>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="menu-bar">
+        <ul>
+            <li><a href="product.html"><i class="fas fa-box"></i> Products</a></li>
+            <li><a href="expense.html"><i class="fas fa-money-bill-wave"></i> Expense</a></li>
+            <li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+            <li><a href="reports.html"><i class="fas fa-chart-line"></i> Reports</a></li>
+            <li><a href="users.html"><i class="fas fa-users"></i> Users</a></li>
+        </ul>
+    </nav>
+
+    <div class="users-container">
+        <div class="user-header">
+            <h2>Manage Users</h2>
+        </div>
+
+        <table class="users-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="usersTableBody">
+                <!-- Dynamic rows will be added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Logout Button -->
+    <!-- Logout Button -->
+    <div class="logout-button-container">
+        <button id="logout-btn" class="logout-button">Logout</button>
+    </div>
+
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Chatterbox Tracking. All rights reserved.</p>
+        <p>Designed with ❤️</p>
+    </footer>
+
+    <script src="../static/java/users.js"></script>
+</body>
+</html>

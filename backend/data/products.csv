@@ -1,0 +1,4 @@
+id,name,image_url,quantity,cost,category
+1,Latte,https://example.com/latte.jpg,10,3.50,drink
+2,Sandwich,https://example.com/sandwich.jpg,5,5.00,food3,test,test.png,11,222,Drink
+3,test,test.png,1,23,Food

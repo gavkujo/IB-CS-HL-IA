@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/styles/orders.css">
+    <script defer src="../static/java/orders.js"></script>
+</head>
+<body>
+    <!-- Header -->
+<header class="header">
+    <div class="logo-title">
+        <a href="../templates/index.html"> <!-- Make the logo clickable -->
+            <img src="../logo.png" alt="Logo" class="logo">
+        </a>
+        <h1>Chatterbox Tracking</h1>
+    </div>
+</header>
+
+    <!-- Navigation Bar -->
+    <nav class="menu-bar">
+        <ul>
+            <li><a href="product.html"><i class="fas fa-box"></i> Products</a></li>
+            <li><a href="expense.html"><i class="fas fa-money-bill-wave"></i> Expense</a></li>
+            <li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+            <li><a href="reports.html"><i class="fas fa-chart-line"></i> Reports</a></li>
+            <li><a href="users.html"><i class="fas fa-users"></i> Users</a></li>
+        </ul>
+    </nav>
+
+    <!-- Order Section -->
+    <main>
+        <h2 class="section-title">Manage Orders</h2>
+
+        <!-- Add Order Form -->
+        <div class="add-order-form">
+            <h3>Add New Order</h3>
+            <form id="orderForm">
+                <label for="name">Order Name:</label>
+                <input type="text" id="name" placeholder="Enter order name" required>
+
+                <label for="quantity">Quantity Used:</label>
+                <input type="number" id="quantity" placeholder="Enter quantity used" required>
+
+                <label for="cost">Cost:</label>
+                <input type="number" id="cost" placeholder="Enter cost" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <label for="order_date">Order Date:</label>
+                <input type="date" id="order_date" required>
+
+                <label for="delivery_location">Delivery Location:</label>
+                <input type="text" id="delivery_location" placeholder="Enter delivery location" required>
+
+                <button type="submit">Add Order</button>
+            </form>
+        </div>
+
+        <!-- Order History -->
+        <h3>Order History</h3>
+        <div class="order-history" id="order-history">
+            <!-- Placeholder for dynamically added orders -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Chatterbox Tracking. All rights reserved.</p>
+        <p>Designed with ❤️</p>
+    </footer>
+</body>
+</html>

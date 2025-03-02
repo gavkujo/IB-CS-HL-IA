@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/styles/report.css">
+    <script defer src="../static/java/report.js"></script>
+</head>
+<body>
+        <!-- Header -->
+<header class="header">
+    <div class="logo-title">
+        <a href="../templates/index.html"> <!-- Make the logo clickable -->
+            <img src="../logo.png" alt="Logo" class="logo">
+        </a>
+        <h1>Chatterbox Tracking</h1>
+    </div>
+</header>
+
+    <!-- Navigation Bar -->
+    <nav class="menu-bar">
+        <ul>
+            <li><a href="product.html"><i class="fas fa-box"></i> Products</a></li>
+            <li><a href="expense.html"><i class="fas fa-money-bill-wave"></i> Expense</a></li>
+            <li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+            <li><a href="reports.html"><i class="fas fa-chart-line"></i> Reports</a></li>
+            <li><a href="users.html"><i class="fas fa-users"></i> Users</a></li>
+        </ul>
+    </nav>
+    <div class="report-container">
+ 
+
+        <div class="statistics">
+            <div><strong>Total Earned:</strong> <span id="totalEarnedReport">$0.00</span></div>
+            <div><strong>Total Spent:</strong> <span id="totalSpentReport">$0.00</span></div>
+            <div><strong>Number of Orders:</strong> <span id="totalOrders">0</span></div>
+        </div>
+
+        <h2>Most Popular Products</h2>
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Amount Spent</th>
+                    <th>Orders</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Populated dynamically with JS -->
+            </tbody>
+        </table>
+
+        <div class="download-report">
+            <button id="downloadReportBtn">Download Report</button>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Chatterbox Tracking. All rights reserved.</p>
+        <p>Designed with ❤️</p>
+    </footer>
+
+    <script src="../static/java/report.js"></script>
+</body>
+</html>

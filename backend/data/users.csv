@@ -1,0 +1,3 @@
+id,name,email,password,role
+1,gav,gav@gav,042b8796295feff56bd2f15dc1f47f8b51ca8ba1f0ee57ac9b5e968e673e3206,admin
+2,hawk,hawk@1,8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92,user
