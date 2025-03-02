@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let productsData = {};
 
     // Fetch orders data from Flask backend
-    fetch("http://127.0.0.1:5000/orders")
+    fetch("https://ib-cs-hl-ia.onrender.com/orders")
         .then(response => response.json())
         .then(orders => {
             orders.forEach(order => {
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error("Error fetching orders:", error));
 
     // Fetch expenses data from Flask backend
-    fetch("http://127.0.0.1:5000/expenses")
+    fetch("https://ib-cs-hl-ia.onrender.com/expenses")
         .then(response => response.json())
         .then(transactions => {
             transactions.forEach(transaction => {

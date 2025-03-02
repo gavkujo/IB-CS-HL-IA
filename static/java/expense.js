@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let chartInstance = null;
 
     // Fetch transactions from backend
-    fetch("http://127.0.0.1:5000/expenses")
+    fetch("https://ib-cs-hl-ia.onrender.com/expenses")
         .then(response => response.json())
         .then(data => {
             transactions = data;
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             transaction_date: document.getElementById('transaction_date').value
         };
 
-        fetch("http://127.0.0.1:5000/add_expense", {
+        fetch("https://ib-cs-hl-ia.onrender.com/add_expense", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(transaction)

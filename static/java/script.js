@@ -52,7 +52,7 @@ loginForm.addEventListener("submit", async (e) => {
     }
 
     try {
-        const response = await fetch("http://127.0.0.1:5000/login", {
+        const response = await fetch("https://ib-cs-hl-ia.onrender.com/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, password }),
@@ -100,7 +100,7 @@ registerForm.addEventListener("submit", async (e) => {
     }
 
     try {
-        const response = await fetch("http://127.0.0.1:5000/register", {
+        const response = await fetch("https://ib-cs-hl-ia.onrender.com/register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ name, email, password }),
@@ -122,7 +122,7 @@ logoutBtn.addEventListener("click", () => {
     localStorage.removeItem("user");
     localStorage.removeItem("userRole"); // Clear role
     showMessage("You have been logged out!");
-    window.location.href = "index.html";
+    window.location.href = "start.html";
 });
 
 

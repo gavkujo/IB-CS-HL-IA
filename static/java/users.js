@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const loggedInUserRole = localStorage.getItem("userRole");
 
     function fetchUsers() {
-        fetch("http://127.0.0.1:5000/get_users")
+        fetch("https://ib-cs-hl-ia.onrender.com/get_users")
             .then(response => response.json())
             .then(users => {
                 usersTableBody.innerHTML = "";
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Send DELETE request with admin role verification
     function deleteUser(userId) {
-        fetch(`http://127.0.0.1:5000/delete_user/${userId}`, {
+        fetch(`https://ib-cs-hl-ia.onrender.com/delete_user/${userId}`, {
             method: "DELETE",
             headers: { "User-Role": localStorage.getItem("userRole") }  // Send role to backend
         })
@@ -62,5 +62,5 @@ document.getElementById("logout-btn").addEventListener("click", () => {
     localStorage.removeItem("user");  // Remove user email
     localStorage.removeItem("userRole");  // Remove user role
     alert("You have been logged out!");
-    window.location.href = "../templates/login.html";  // Redirect to login page
+    window.location.href = "../index.html";  // Redirect to login page
 });

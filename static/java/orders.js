@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const orderHistory = document.getElementById('order-history');
 
     // Fetch orders from backend
-    fetch("http://127.0.0.1:5000/orders")
+    fetch("https://ib-cs-hl-ia.onrender.com/orders")
         .then(response => response.json())
         .then(orders => {
             orders.forEach(addOrderToHistory);
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             delivery_location: document.getElementById('delivery_location').value
         };
 
-        fetch("http://127.0.0.1:5000/orders", {
+        fetch("https://ib-cs-hl-ia.onrender.com/orders", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(order)

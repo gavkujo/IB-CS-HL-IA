@@ -71,7 +71,7 @@
             }
 
             try {
-                const response = await fetch(`http://127.0.0.1:5000/get_summary?start_date=${startDate}&end_date=${endDate}`);
+                const response = await fetch(`https://ib-cs-hl-ia.onrender.com/get_summary?start_date=${startDate}&end_date=${endDate}`);
                 const data = await response.json();
 
                 if (response.ok) {

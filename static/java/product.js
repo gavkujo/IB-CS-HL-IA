@@ -1,7 +1,7 @@
 // Function to fetch products from Flask backend
 async function fetchProducts() {
     try {
-        const response = await fetch("http://127.0.0.1:5000/products");
+        const response = await fetch("https://ib-cs-hl-ia.onrender.com/products");
         
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
@@ -72,7 +72,7 @@ document.getElementById("productForm").addEventListener("submit", async function
 
     try {
         // Send product data to Flask backend
-        const response = await fetch("http://127.0.0.1:5000/add_product", {
+        const response = await fetch("https://ib-cs-hl-ia.onrender.com/add_product", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newProduct)
