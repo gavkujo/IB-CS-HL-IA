@@ -64,7 +64,7 @@ loginForm.addEventListener("submit", async (e) => {
         if (response.ok) {
             localStorage.setItem("user", email);  // Store email
             localStorage.setItem("userRole", data.role);  // Store user role (admin/user)
-            window.location.href = "index.html"; // Redirect to dashboard
+            window.location.href = "start.html"; // Redirect to dashboard
         }
     } catch (error) {
         showMessage("Login failed! Please try again.", false);
